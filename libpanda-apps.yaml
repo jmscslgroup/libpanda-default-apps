@@ -1,0 +1,11 @@
+apps:
+  - name: cbf
+    path: cbf/
+    properties:
+      - owns_panda: true
+  - name: joy_to_veh
+  - name: joystick ROSless
+    path: joystick2toyota
+  - name: mvt
+    path: mvt/
+  - name: pandarecord
