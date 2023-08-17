@@ -4,7 +4,7 @@ apps:
     properties:
       - owns_panda: true
   - name: joy_to_veh
-  - name: joystick ROSless
+  - name: joystick
     path: joystick2toyota
   - name: mvt
     path: mvt/
