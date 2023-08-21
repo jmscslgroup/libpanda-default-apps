@@ -59,7 +59,8 @@ cd catkin_ws/src
 
 # Build:
 cd /home/$LIBPANDA_USR/catkin_ws
-source devel/setup.sh
+#source devel/setup.sh
+source /opt/ros/noetic/setup.bash   # will it always be noetic, in this location?
 catkin_make
 
 # ROS upstart install:
