@@ -7,16 +7,17 @@ if [[ $EUID == 0 ]];
   exit
 fi
 
-echo "Installing/Updating CBF ROS packages"
+echo "Installing/Updating joy2veh ROS packages"
 
 source ~/.bashrc
 
 LIBPANDA_SRC=$(cat /etc/libpanda.d/libpanda_src_dir)
+LIBPANDA_USR=$(cat /etc/libpanda.d/libpanda_usr)
 #ROS_PACKAGE_REPOSITORY_CSV=/etc/libpanda.d/apps/joy_to_veh/rosRepositories.csv
 #
 #cat $ROS_PACKAGE_REPOSITORY_CSV | tr -d " \t\r" | awk -F',' '{print $2 ": " substr($3,1,7)}' | tr '\n' ',' > $LIBPANDA_SRC/scripts/rosRepoShort.txt
 
-cd ~
+cd /home/$LIBPANDA_USR
 if [ ! -d catkin_ws/src ]; then
     mkdir -p catkin_ws/src
     source /opt/ros/noetic/setup.bash   # will it always be noetic, in this location?
@@ -57,7 +58,7 @@ cd catkin_ws/src
 #TODO add 'sudo apt-get install libdiagnostic-updater-dev'
 
 # Build:
-cd ~/catkin_ws
+cd /home/$LIBPANDA_USR/catkin_ws
 source devel/setup.sh
 catkin_make
 
