@@ -3,9 +3,40 @@ apps:
     path: cbf/
     properties:
       - owns_panda: true
+    ros_repositories:
+        - owner: jmscslgroup
+          repo: can_to_ros
+          branch_or_hash: d7134708e49001b407aba4c382c9c6daec6ce0de
+        - owner: jmscslgroup
+          repo: cbf
+          branch_or_hash: 49f281a3718c927b6e2624f0679854347c76105b
+        - owner: jmscslgroup
+          repo: velocity_controller
+          branch_or_hash: 3f8a36192d41b7d454e9f787ff61b99f287e3e0d
+        - owner: jmscslgroup
+          repo: setpointreader
+          branch_or_hash: bf9116d7e7a8284527e1d94537de1228c2b3abb8
   - name: joy_to_veh
+    properties:
+      - owns_panda: true
+    ros_repositories:
+        - owner: jmscslgroup
+          repo: can_to_ros
+          branch_or_hash: 17dd12e9e4aa33c072a36cba55649a354f0d79f6
+        - owner: MatthewNice
+          repo: joy_to_veh
+          branch_or_hash: 6c2601c2c1ec394d937b2685c4b2f2072ce970d8
+        - owner: MatthewNice
+          repo: joystick_drivers
+          branch_or_hash: f1ff93d5ccd49f779f162d8b1448acd59efbb3c1
   - name: joystick
     path: joystick2toyota
+    properties:
+      - owns_panda: true
   - name: mvt
     path: mvt/
+    properties:
+      - owns_panda: true
   - name: pandarecord
+    properties:
+      - owns_panda: true
