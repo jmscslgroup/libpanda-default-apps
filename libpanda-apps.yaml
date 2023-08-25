@@ -19,6 +19,8 @@ apps:
   - name: joy_to_veh
     properties:
       - owns_panda: true
+    dependencies:
+      - apt: libdiagnostic-updater-dev
     ros_repositories:
         - owner: jmscslgroup
           repo: can_to_ros
