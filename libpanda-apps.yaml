@@ -27,9 +27,10 @@ apps:
           branch_or_hash: 17dd12e9e4aa33c072a36cba55649a354f0d79f6
         - owner: MatthewNice
           repo: joy_to_veh
+          branch_or_hash: indigo-devel
         - owner: MatthewNice
           repo: joystick_drivers
-  - name: joystick
+  - name: joystick2toyota
     path: joystick2toyota
     properties:
       - owns_panda: true
