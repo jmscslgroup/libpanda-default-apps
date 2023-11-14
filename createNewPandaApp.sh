@@ -58,7 +58,7 @@ rosrun robot_upstart install {REPONAME}/launch/${LAUNCH_FILE} --user root
 
 echo "Enabling can_to_ros startup script"
 sudo systemctl daemon-reload
-sudo systemctl enable ${REPONAME}
+sudo systemctl enable {REPONAME}
 popd
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 EOF
