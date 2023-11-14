@@ -141,7 +141,7 @@ EOF
 
 
 read -r -d '' SERVICE <<-'EOF'
-${REPONAME}
+{REPONAME}
 EOF
 
 
