@@ -149,7 +149,7 @@ read -r -d '' START <<-'EOF'
 #!/bin/bash
 
 echo "=========================="
-echo "Starting App {APPNAME} for {APP_NAME_PRETTY}"
+echo "Starting App {APPNAME} for {APP_PRETTY_NAME}"
 
 
 systemctl start {REPONAMECLEAN}
