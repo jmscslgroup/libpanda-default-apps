@@ -49,7 +49,7 @@ source /home/$LIBPANDA_USER/.bashrc
 
 runuser -l $LIBPANDA_USER -c /etc/libpanda.d/apps/{APPNAMEFOLDER}/installRosPackages.sh
 
-echo "Installing {APP_NAME_PRETTY}..."
+echo "Installing {APP_PRETTY_NAME}..."
 # runuser -l $LIBPANDA_USER -c /etc/libpanda.d/apps/vsl/installMidVslController.sh
 pushd /home/$LIBPANDA_USER/catkin_ws
 runuser -l $LIBPANDA_USER -c 'source /opt/ros/noetic/setup.bash && cd catkin_ws && catkin_make'
@@ -229,11 +229,11 @@ GITHUB_OWNER=
 read -p 'Enter the app pretty name (spaces ok): ' APP_PRETTY_NAME
 echo "${APP_PRETTY_NAME}" is the name of the app.
 
-read -p 'What is the github owner/org for the repository for this app?' GITHUB_OWNER
+read -p 'What is the github owner/org for the repository for this app? ' GITHUB_OWNER
 read -p 'What is the github repo for this app?: ' REPONAME
 read -p 'Enter a 1-line sentence that describes this app: ' APP_DESCRIPTION
 read -p 'What is the app shortname (no spaces or special chars)?: ' APPNAME
-read -p 'What is the name of the launchfile to load on startup in the ${REPONAME}/launch folder?[file.launch]?: ' LAUNCHFILE
+read -p 'What is the path-free name of the launchfile to load on startup in the ${REPONAME}/launch folder? [file.launch]: ' LAUNCHFILE
 
 
 
@@ -259,7 +259,7 @@ mkdir -p ${APPNAMEFOLDER}
 
 # to get the output to work, we have to use single quotes, then double quotes
 # next is description file
-echo "Generating ${DESCRIPTION}"
+echo "Generating ${DESCRIPTIONFILE}"
 echo "${DESCRIPTION}" | sed -e 's/{APP_DESCRIPTION}/'"${APP_DESCRIPTION}/" \
 | sed -e 's/{GITHUB_OWNER}/'"${GITHUB_OWNER}/" \
 | sed -e 's/{REPONAME}/'"${REPONAME}/" \
