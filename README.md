@@ -34,15 +34,10 @@ yourpackage
   -- service
 ```
 
-On the raspberrypi installed in the car, you then clone your repository into the catkin_ws, and run catkin_make
+On the raspberrypi installed in the car, you now install the package
 
 ```
-cd ~/catkin_ws
-catkin_make
-``
-then, time to run the app manager:
-```
-sudo libpanda-app-manager
+sudo libpanda-app-manager -g
 ```
 
-Select your app, and it should install everything!
+Enter the git user and repository details, and it should install everything!
