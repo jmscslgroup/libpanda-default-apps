@@ -49,7 +49,7 @@ source /home/$LIBPANDA_USER/.bashrc
 
 runuser -l $LIBPANDA_USER -c /etc/libpanda.d/apps/{APPNAMEFOLDER}/installRosPackages.sh
 
-echo "Installing {APP_PRETTY_NAME}..."
+echo "Installing {APPNAMEPRETTY}..."
 # runuser -l $LIBPANDA_USER -c /etc/libpanda.d/apps/vsl/installMidVslController.sh
 pushd /home/$LIBPANDA_USER/catkin_ws
 runuser -l $LIBPANDA_USER -c 'source /opt/ros/noetic/setup.bash && cd catkin_ws && catkin_make'
@@ -104,7 +104,7 @@ if [[ $EUID == 0 ]];
   exit
 fi
 
-echo "Installing/Updating {APP_PRETTY_NAME} packages"
+echo "Installing/Updating {APPNAMEPRETTY} packages"
 
 source ~/.bashrc
 
@@ -149,7 +149,7 @@ read -r -d '' START <<-'EOF'
 #!/bin/bash
 
 echo "=========================="
-echo "Starting App {APPNAME} for {APP_PRETTY_NAME}"
+echo "Starting App {APPNAME} for {APPNAMEPRETTY}"
 
 
 systemctl start {REPONAMECLEAN}
@@ -220,14 +220,14 @@ EOF
 
 APPNAME=
 REPONAME=
-APP_PRETTY_NAME=""
+APPNAMEPRETTY=""
 APP_DESCRIPTION=""
 GITHUB_OWNER=
 
 # now we read variables
 
-read -p 'Enter the app pretty name (spaces ok): ' APP_PRETTY_NAME
-echo "${APP_PRETTY_NAME}" is the name of the app.
+read -p 'Enter the app pretty name (spaces ok): ' APPNAMEPRETTY
+echo "${APPNAMEPRETTY}" is the name of the app.
 
 read -p 'What is the github owner/org for the repository for this app? ' GITHUB_OWNER
 read -p 'What is the github repo for this app?: ' REPONAME
